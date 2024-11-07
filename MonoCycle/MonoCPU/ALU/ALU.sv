@@ -1,7 +1,7 @@
 module ALU(A, B, AluOp, S);
-  input [31:0] A, B;
-  input [3:0] AluOp;
-  output reg [31:0] S;
+  input [31:0] A, B; // Recibe dos entradas de 32 bits
+  input [3:0] AluOp; // Recibe una entrada de 4 bits la operación a realizar 2^4 = 16 operaciones
+  output reg [31:0] S; // Salida de 32 bits
 
   always @* begin
     case (AluOp)

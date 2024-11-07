@@ -1,7 +1,7 @@
 module MuxAluA (
     input logic [31:0] Apc,
     input logic [31:0] Brs1,
-    input logic MUXopa,
+    input logic MUXopa, // 1 bit de entrada
     output logic [31:0] outMuxa
 );
 
