@@ -9,21 +9,9 @@ module MUXRUD(Aoutpc, Bdatard, Calures, MUXopRUW, outMuxdm);
   always @(*) begin
    
     case (MUXopRUW)    	
-      2'b10:      
-        begin
-          //Resultado la siguiente instrucción 
-          outMuxdm <= Aoutpc;
-        end
-      2'b01:         
-        begin   
-          //Salida de la memoria de datos
-          outMuxdm = Bdatard; 
-        end
-      2'b00:         
-        begin  
-          //Salida de la ALU 
-          outMuxdm <= Calures;          
-        end      
+      2'b10: outMuxdm <= Aoutpc;
+      2'b01: outMuxdm = Bdatard; 
+      2'b00: outMuxdm <= Calures;     
     endcase
     //$display("En muxdm --> outMuxdm = %d", outMuxdm);
   end

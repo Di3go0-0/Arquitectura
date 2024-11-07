@@ -7,16 +7,8 @@ module MUXPC(Asum, Balures, MUXopbu, outMuxbu);
 
   always @(*) begin
     case (MUXopbu)    	
-      1'b1:      
-        begin
-          //Jump
-          outMuxbu <= Balures;
-        end
-      1'b0:         
-        begin
-          //Next instruction
-          outMuxbu <= Asum;          
-        end
+      1'b1: outMuxbu <= Balures;
+      1'b0: outMuxbu <= Asum;
     endcase   
   end
 endmodule

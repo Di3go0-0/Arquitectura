@@ -7,14 +7,8 @@ module MuxAluB(Ars2, Bimext, MUXopb, outMuxb);
   
   always @(*) begin
     case (MUXopb)    	
-      1'b1:      
-        begin
-          outMuxb <= Bimext;
-        end
-      1'b0:         
-        begin            
-          outMuxb <= Ars2;          
-        end
+      1'b1: outMuxb <= Bimext;
+      1'b0: outMuxb <= Ars2;          
     endcase   
   end
 endmodule
