@@ -10,14 +10,7 @@ module Instruction_Memory(
 
     // Cargar el archivo de instrucciones
     initial begin  
-        $readmemb("program.txt", im); // Leer el txt.
-
-        // Mostrar las instrucciones en formato binario
-        // for (integer i = 0; i < $size(im); i = i + 4) begin   // Recorre toda la memoria IM de 4 en 4 bytes
-        //     $display("%d --> %b", i, {im[i], im[i+1], im[i+2], im[i+3]}); // Muestra la instrucción en formato binario 
-        //     // El %d es para mostrar el número de instrucción y el %b es para mostrar la instrucción en formato binario
-        //     // {im[i], im[i+1], im[i+2], im[i+3]} es para concatenar los 4 bytes de la instrucción
-        // end
+        $readmemb("./InstructionMemory/program.txt", im);
     end
 
     // Asignación de la instrucción de la dirección dada

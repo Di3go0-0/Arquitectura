@@ -6,3 +6,5 @@ module SUM(addrPC, outSUM);
     outSUM = addrPC + 32'b100; // 1000 es una constante que se suma a la dirección del PC
   end
 endmodule
+
+

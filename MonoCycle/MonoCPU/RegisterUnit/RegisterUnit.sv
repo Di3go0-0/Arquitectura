@@ -6,12 +6,10 @@ module RegisterUnit (
   input [31:0] DataWr,
   input RUWr,
   
-  output reg [31:0] RURs1,
-  output reg [31:0] RURs2
+  output wire [31:0] RURs1, // Cambiado a wire
+  output wire [31:0] RURs2  // Cambiado a wire
 );
-
   logic [31:0] RU [0:31];
-
   initial begin
     RU[0] = 32'h00000000;
     RU[1] = 32'h00000001;
@@ -30,9 +28,9 @@ module RegisterUnit (
   
   assign RURs1 = RU[rs1]; 
   assign RURs2 = RU[rs2];
-
   always @(posedge clk) begin
     if(RUWr && rd != 0) 
       RU[rd] <= DataWr;
   end //always 
 endmodule
+

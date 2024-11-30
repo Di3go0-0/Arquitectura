@@ -16,3 +16,4 @@ module MUXRUD(Aoutpc, Bdatard, Calures, MUXopRUW, outMuxdm);
     //$display("En muxdm --> outMuxdm = %d", outMuxdm);
   end
 endmodule
+
